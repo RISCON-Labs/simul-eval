@@ -1,0 +1,153 @@
+{
+  "name": "SIMUL stage-1 case cards: 100-card sample",
+  "protocol_version": "simul-stage1-v1",
+  "policy": "first_5_by_card_id_asc_per_shard",
+  "rule": "For each shard listed in cards-s1-index.json, in index order: sort its records by card_id (ascending, as strings) and keep the first 5. Each line is copied byte for byte from the shard.",
+  "shards": 20,
+  "per_shard": 5,
+  "total": 100,
+  "source_index_sha256": "e6bcef7e1847f74fb1ad786ad887c3856df1b7241b653b0f9377246d18b6b589",
+  "sample_sha256": "d7faf7e021737246b60495830271630673a4ce99cfb2ff22dd5b78354a3aa519",
+  "cards": {
+    "01": [
+      "004fe71b9355",
+      "0061541bcbd8",
+      "008daa5bc48d",
+      "01263f426fd8",
+      "014a454fa838"
+    ],
+    "03": [
+      "0029bdf10124",
+      "003dcbd9f00e",
+      "004bb64cd6e1",
+      "00512499c2f9",
+      "00b90ad6da71"
+    ],
+    "04": [
+      "00105a7e0575",
+      "004123ea5495",
+      "006000f260a6",
+      "0074afea7f30",
+      "00aab4a6ee41"
+    ],
+    "05": [
+      "0022cd6fb631",
+      "00c0eb128cc3",
+      "00d1b35d382b",
+      "00db464c4f62",
+      "0108eb13ecf4"
+    ],
+    "06": [
+      "000779b5b40a",
+      "0015acfc8aae",
+      "003fe8829945",
+      "0063ec69828c",
+      "007576ec85a6"
+    ],
+    "07": [
+      "001b462222b3",
+      "00e1f38aabac",
+      "010060f0c9b6",
+      "014e5377bb82",
+      "01d93a079c02"
+    ],
+    "08": [
+      "0012f9cf0aa9",
+      "007220e8d4e5",
+      "007d0e990473",
+      "009edcc6823e",
+      "01559da0d633"
+    ],
+    "09": [
+      "0096c06bdf85",
+      "00efb07c8057",
+      "00f92609f623",
+      "0143cfaca9a6",
+      "017ac75d7846"
+    ],
+    "10": [
+      "0028af8f009b",
+      "003dbf56340a",
+      "0053cedd5cbf",
+      "00b3a59b2c1c",
+      "015e5546db64"
+    ],
+    "11": [
+      "00827ca0352a",
+      "008795da56bd",
+      "00ba18d96833",
+      "01076a0eb5c1",
+      "013558812b81"
+    ],
+    "12": [
+      "00000edd3cea",
+      "001720f5cf4e",
+      "0028068ada07",
+      "009cbe6ab507",
+      "0183aaed3f51"
+    ],
+    "13": [
+      "005d29094f12",
+      "00a0492634c3",
+      "0157c3dc667d",
+      "018d4e16d867",
+      "01a7ba32906f"
+    ],
+    "14": [
+      "00cd13df6d08",
+      "013bb35699e9",
+      "017be694fa7f",
+      "01da34dfc862",
+      "0224b8cd073d"
+    ],
+    "15": [
+      "005c3ca44f69",
+      "009dee481de1",
+      "016d4e814f4f",
+      "018d3df2ed5b",
+      "0190dbf8836e"
+    ],
+    "16": [
+      "000e39bd6664",
+      "0015c1adfe85",
+      "00966bde697d",
+      "0103c97fb35f",
+      "01b332dabe16"
+    ],
+    "17": [
+      "0027650e4216",
+      "003b45290432",
+      "00446c8180fc",
+      "00a37fcaccfa",
+      "00a79e459682"
+    ],
+    "18": [
+      "003b34c7b648",
+      "007c6fc64005",
+      "009683dd9422",
+      "00f4eb44c00d",
+      "0147045cf4cd"
+    ],
+    "19": [
+      "00aa3ae7cc62",
+      "00f47540adee",
+      "01a628a7ab02",
+      "020d696840d9",
+      "023f9bf4f6f2"
+    ],
+    "20": [
+      "0004e5a69a7b",
+      "01334a43c15f",
+      "018eae553999",
+      "01df2368054d",
+      "020bf339be79"
+    ],
+    "21": [
+      "000a7be5f7c5",
+      "00602f2fa87f",
+      "00b25102c594",
+      "01230f50098d",
+      "0143d37a72eb"
+    ]
+  }
+}

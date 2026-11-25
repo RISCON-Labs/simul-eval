@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/RISCON-Labs/simul-eval/schema/stage1-card.schema.json",
+  "title": "SIMUL stage-1 case card (protocol simul-stage1-v1)",
+  "description": "One synthetic decision-point case card as published: one decision point placed in one simulated company, one JSON object per line in the JSONL shards. The published record has no reference_outcome and no refutation_condition field. That is a statement about fields, not about wording: the evaluator field `invariants` often tells how the case was handled, and some `situation` texts do too. Before any judged blind run, strip `invariants` from every agent input AND rewrite or exclude the cards whose `situation` or `options` tell how the case ended. See x-simul-blind-run-requirements.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["card_id", "edition", "channel", "opener", "participants", "situation", "options", "invariants"],
+  "properties": {
+    "card_id": {
+      "description": "Identity. Stable card identifier, unique across every shard.",
+      "type": "string",
+      "pattern": "^[0-9a-f]{12}$"
+    },
+    "edition": {
+      "description": "Identity. Roster slot (edition number) of the organization when the card was built: 01 to 100. A display slot, not an identity of the organization; the organization is named by `org` in the card index.",
+      "type": "string",
+      "pattern": "^(0[1-9]|[1-9][0-9]|100)$"
+    },
+    "channel": {
+      "description": "Agent-visible. Office channel id.",
+      "type": "string",
+      "minLength": 1
+    },
+    "opener": {
+      "description": "Agent-visible. Roster id of the member who opens the conversation. On two published cards the opener is not among the participants.",
+      "type": "string",
+      "minLength": 1
+    },
+    "participants": {
+      "description": "Agent-visible. Roster ids of the members involved. One published card lists a participant twice.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "situation": {
+      "description": "Agent-visible. Written as the situation before the decision. Not every published text keeps to that: some narrate how the source conversation went on or ended (for example that a decision-maker had already said what would happen, or that the thread ended without a decision). Such cards must be rewritten to the moment before the decision, or excluded, before a judged blind run. The verifier lists lexical candidates under blind_readiness.",
+      "type": "string",
+      "minLength": 1
+    },
+    "options": {
+      "description": "Agent-visible. The choices on the table. Usually two or more; three published cards hold a single option and three hold an empty option text.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "invariants": {
+      "description": "Evaluator-only. Organizational properties the case keeps when it is moved to another company. Many entries tell how the case was handled or settled, so this field is never part of an agent input. Null on 23 published cards.",
+      "type": ["array", "null"],
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  },
+  "x-simul-protocol": "simul-stage1-v1",
+  "x-simul-visibility": {
+    "identity": ["card_id", "edition"],
+    "agent": ["channel", "opener", "participants", "situation", "options"],
+    "evaluator": ["invariants"]
+  },
+  "x-simul-withheld": ["reference_outcome", "refutation_condition"],
+  "x-simul-blind-run-requirements": [
+    "Strip `invariants` from every agent input: give an agent only the five agent-visible fields.",
+    "Rewrite to the moment before the decision, or exclude, every card whose `situation` or `options` tell how the case ended; the verifier's blind_readiness block lists lexical candidates, and the remaining cards still need review.",
+    "Leave the published bytes unchanged and record the digest of the curated agent projection used in the run."
+  ]
+}

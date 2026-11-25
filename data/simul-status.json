@@ -1,0 +1,683 @@
+{
+  "updated": "2026-11-23",
+  "office_url": "https://together.risconlabs.com",
+  "office_edition": "01",
+  "pipeline": [
+    {
+      "id": "case",
+      "status": "active",
+      "name": "Decision-point case",
+      "name_ko": "갈림길 사례",
+      "desc": "Each case card captures a moment where an organization could have gone another way: the situation, the options, and a reference outcome.",
+      "desc_ko": "사례 카드 하나는 조직이 다른 길로 갈 수 있었던 순간을 담습니다. 상황, 선택지, 기준 결과입니다.",
+      "status_label": "19,414 stage-1 cards",
+      "status_label_ko": "1단계 카드 19,414장"
+    },
+    {
+      "id": "stage",
+      "status": "active",
+      "name": "Industry stage",
+      "name_ko": "업종 무대",
+      "desc": "By protocol, the same decision point is placed in a synthetic company in another industry so surviving and lost organizational properties can be recorded; published artifacts currently cover stage-1 shards only, without move-by-move loss tables.",
+      "desc_ko": "규칙상 같은 갈림길을 다른 업종의 가상 회사에 놓고 보존되거나 잃은 조직 속성을 기록합니다. 현재 공개 자료에는 1단계 카드 묶음만 있으며 전환별 상실 속성 표는 아직 공개되지 않았습니다.",
+      "status_label": "Cards in 20 synthetic companies",
+      "status_label_ko": "가상 회사 20곳의 카드"
+    },
+    {
+      "id": "branch",
+      "status": "active",
+      "name": "Size branches",
+      "name_ko": "규모 가지",
+      "desc": "The same synthetic company is planned at five sizes, to see what changes at the same decision point as the company grows.",
+      "desc_ko": "같은 가상 회사를 다섯 규모로 지을 계획이며, 회사가 커질 때 같은 갈림길에서 무엇이 달라지는지 봅니다.",
+      "status_label": "15-person branch built",
+      "status_label_ko": "15명 가지 지음"
+    },
+    {
+      "id": "office",
+      "status": "active",
+      "name": "Virtual office",
+      "name_ko": "가상 사무실",
+      "desc": "By protocol, only the pre-decision situation is posted, role-assigned AI models talk it through, and the reference outcome is withheld from every agent. Blinding is not verified from public turn logs for recorded runs.",
+      "desc_ko": "규칙상 결정 이전의 상황만 올리고 역할을 배정받은 AI 모델이 논의하며, 기준 결과는 에이전트 입력에서 뺍니다. 공개된 턴별 기록이 없어 기록된 운행의 실제 가림 여부는 확인되지 않았습니다.",
+      "status_label": "1 test run",
+      "status_label_ko": "시험 운행 1회"
+    },
+    {
+      "id": "judge",
+      "status": "active",
+      "name": "Compare",
+      "name_ko": "비교",
+      "desc": "By protocol, a model from outside the speakers' model families judges which way the conversation leaned and compares it with the reference outcome. Whether a run met this is stated per run.",
+      "desc_ko": "규칙상 발화 모델들과 계열이 다른 모델이 대화가 어느 쪽으로 기울었는지 판정하고 기준 결과와 비교합니다. 운행이 이 조건을 지켰는지는 운행마다 적습니다.",
+      "status_label": "1 test; judge-family separation not verified",
+      "status_label_ko": "시험 1회, 판정 계열 분리 미확인"
+    }
+  ],
+  "editions": [
+    {
+      "no": "01",
+      "status": "active",
+      "domain_id": "it-services",
+      "domain": "IT services",
+      "product": "Migrating legacy business systems to AI",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Test company live"
+    },
+    {
+      "no": "02",
+      "status": "planned",
+      "domain_id": "semiconductors",
+      "domain": "Semiconductors",
+      "product": "silicon IP for low-bit inference: design licensing and a verification workbench",
+      "size": 500,
+      "branch": "S3",
+      "status_label": "Product public · office in preparation",
+      "url": "https://corvel.risconlabs.com"
+    },
+    {
+      "no": "03",
+      "status": "planned",
+      "domain_id": "advertising-and-marketing-services",
+      "domain": "Advertising and marketing services",
+      "product": "Performance marketing",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Planned"
+    },
+    {
+      "no": "04",
+      "status": "planned",
+      "domain_id": "consumer-goods-manufacturing",
+      "domain": "Consumer goods manufacturing",
+      "product": "Skateboard decks and hardware",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Planned"
+    },
+    {
+      "no": "05",
+      "status": "planned",
+      "domain_id": "electronics-hardware",
+      "domain": "Electronics hardware",
+      "product": "AI XR devices",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Planned"
+    },
+    {
+      "no": "06",
+      "status": "planned",
+      "domain_id": "ai-software",
+      "domain": "AI software",
+      "product": "Apps built on third-party AI models",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Planned"
+    },
+    {
+      "no": "07",
+      "status": "planned",
+      "domain_id": "energy",
+      "domain": "Energy",
+      "product": "Crude production, refining and petrochemicals",
+      "size": 22385,
+      "branch": "S5",
+      "status_label": "Planned"
+    },
+    {
+      "no": "08",
+      "status": "planned",
+      "domain_id": "defense-research",
+      "domain": "Defense research",
+      "product": "DIOPTRA Defense Research Group: deterministic 0-ULP defense dry lab across 8 scenarios, 260/260 C11/Python/JS cross-runtime parity plus 20/20 Python policy fixtures (280/280 suite), 6 physical oracles, 512-case poisoning benchmark, and Ed25519-signed offline witness kit",
+      "size": 3000,
+      "branch": "S4",
+      "status_label": "Product public · office in preparation",
+      "url": "https://dioptra.risconlabs.com"
+    },
+    {
+      "no": "09",
+      "status": "planned",
+      "domain_id": "data-and-analytics",
+      "domain": "Data and analytics",
+      "product": "Security analytics platform",
+      "size": 3000,
+      "branch": "S4",
+      "status_label": "Planned"
+    },
+    {
+      "no": "10",
+      "status": "planned",
+      "domain_id": "food-and-beverage",
+      "domain": "Food and beverage",
+      "product": "Packaged foods, beverages and snacks",
+      "size": 22385,
+      "branch": "S5",
+      "status_label": "Planned"
+    },
+    {
+      "no": "11",
+      "status": "planned",
+      "domain_id": "e-commerce-and-cloud",
+      "domain": "E-commerce and cloud",
+      "product": "Fulfillment and cloud services",
+      "size": 22385,
+      "branch": "S5",
+      "status_label": "Planned"
+    },
+    {
+      "no": "12",
+      "status": "planned",
+      "domain_id": "higher-education",
+      "domain": "Higher education",
+      "product": "AI university: teaching, research and industry partnerships",
+      "size": 3000,
+      "branch": "S4",
+      "status_label": "Planned"
+    },
+    {
+      "no": "13",
+      "status": "planned",
+      "domain_id": "graduate-education",
+      "domain": "Graduate education",
+      "product": "AI graduate school inside a university",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Planned"
+    },
+    {
+      "no": "14",
+      "status": "planned",
+      "domain_id": "education-and-training",
+      "domain": "Education and training",
+      "product": "AI skills academy for career changers and companies",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Planned"
+    },
+    {
+      "no": "15",
+      "status": "planned",
+      "domain_id": "research",
+      "domain": "Research",
+      "product": "AI research institute",
+      "size": 500,
+      "branch": "S3",
+      "status_label": "Planned"
+    },
+    {
+      "no": "16",
+      "status": "planned",
+      "domain_id": "central-government",
+      "domain": "Central government",
+      "product": "National ministry: policy, budget and regulation",
+      "size": 22385,
+      "branch": "S5",
+      "status_label": "Planned"
+    },
+    {
+      "no": "17",
+      "status": "planned",
+      "domain_id": "local-government",
+      "domain": "Local government",
+      "product": "Community service center: frontline services for residents",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Planned"
+    },
+    {
+      "no": "18",
+      "status": "planned",
+      "domain_id": "healthcare",
+      "domain": "Healthcare",
+      "product": "Community general hospital",
+      "size": 500,
+      "branch": "S3",
+      "status_label": "Planned"
+    },
+    {
+      "no": "19",
+      "status": "planned",
+      "domain_id": "academic-medicine",
+      "domain": "Academic medicine",
+      "product": "University hospital: care, teaching and clinical research",
+      "size": 3000,
+      "branch": "S4",
+      "status_label": "Planned"
+    },
+    {
+      "no": "20",
+      "status": "planned",
+      "domain_id": "legal-services",
+      "domain": "Legal services",
+      "product": "Large full-service law firm",
+      "size": 3000,
+      "branch": "S4",
+      "status_label": "Planned"
+    },
+    {
+      "no": "21",
+      "status": "planned",
+      "domain_id": "legal-services",
+      "domain": "Legal services",
+      "product": "Small law office near the courthouse",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Planned"
+    },
+    {
+      "no": "22",
+      "status": "planned",
+      "domain_id": "medical-records-software",
+      "domain": "Medical records software",
+      "product": "sealed evidence ledger for hospital medical records made around falls, restraints and deliveries, which anyone can verify",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Product public · office planned",
+      "url": "https://testied.risconlabs.com"
+    },
+    {
+      "no": "23",
+      "status": "planned",
+      "domain_id": "financial-services",
+      "domain": "Financial services",
+      "product": "Market research, proprietary strategy development and paper execution",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Product public · office planned",
+      "url": "https://wstiger.risconlabs.com"
+    },
+    {
+      "no": "24",
+      "status": "planned",
+      "domain_id": "cybersecurity",
+      "domain": "Cybersecurity",
+      "product": "evidence gate for security findings: each finding is checked against the code it cites and the verdict is issued as a signed receipt",
+      "size": 100,
+      "branch": "S2",
+      "status_label": "Product public · office planned",
+      "url": "https://vericull.risconlabs.com"
+    },
+    {
+      "no": "25",
+      "status": "planned",
+      "domain_id": "audio-mastering",
+      "domain": "Audio mastering",
+      "product": "mastering studio for finished songs, built on its own engine",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Product private · office planned"
+    },
+    {
+      "no": "26",
+      "status": "planned",
+      "domain_id": "legal-research",
+      "domain": "Legal research",
+      "product": "source-led studies of court decisions, published as general information; not a law firm",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Product public · office planned",
+      "url": "https://pro-se.risconlabs.com"
+    },
+    {
+      "no": "27",
+      "status": "planned",
+      "domain_id": "medical-research",
+      "domain": "Medical research",
+      "product": "GALENOS Medical Research Group: biomedical calculation and open-cohort dry-lab audit workbench across 12 computational tracks; research only, not clinical care",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Product public · office planned",
+      "url": "https://galenos.risconlabs.com"
+    },
+    {
+      "no": "28",
+      "status": "planned",
+      "domain_id": "energy-research",
+      "domain": "Energy research",
+      "product": "Aeolipile Energy Research Group: deterministic energy dry lab with 25 calculators, 8,760-hour European grid and solar replay, fusion and battery benchmarks, and offline verification kit",
+      "size": 15,
+      "branch": "S1",
+      "status_label": "Product public · office planned",
+      "url": "https://aeolipile.risconlabs.com"
+    }
+  ],
+  "branches": [
+    {
+      "id": "S1",
+      "size": 15,
+      "status": "active",
+      "name": "Seed",
+      "name_ko": "씨앗",
+      "desc": "15 people, almost no middle management",
+      "desc_ko": "15명, 중간 관리자가 거의 없음",
+      "status_label": "Built",
+      "status_label_ko": "지음"
+    },
+    {
+      "id": "S2",
+      "size": 100,
+      "status": "planned",
+      "name": "Growth",
+      "name_ko": "성장",
+      "desc": "Team leads appear and silos begin to form",
+      "desc_ko": "팀장이 생기고 부서 사이에 칸막이가 서기 시작함",
+      "status_label": "Planned",
+      "status_label_ko": "계획"
+    },
+    {
+      "id": "S3",
+      "size": 500,
+      "status": "planned",
+      "name": "Mid-size",
+      "name_ko": "중견",
+      "desc": "Cross-department bottlenecks and side channels appear",
+      "desc_ko": "부서 사이 병목과 비공식 통로가 생김",
+      "status_label": "Planned",
+      "status_label_ko": "계획"
+    },
+    {
+      "id": "S4",
+      "size": 3000,
+      "status": "planned",
+      "name": "Enterprise",
+      "name_ko": "대기업",
+      "desc": "Divisions plus compliance and security gates",
+      "desc_ko": "사업부, 그리고 준법·보안 관문",
+      "status_label": "Planned",
+      "status_label_ko": "계획"
+    },
+    {
+      "id": "S5",
+      "size": 22385,
+      "status": "planned",
+      "name": "Conglomerate",
+      "name_ko": "그룹",
+      "desc": "Where instructions change on the way down",
+      "desc_ko": "지시가 아래로 내려가며 바뀌는 곳",
+      "status_label": "Planned",
+      "status_label_ko": "계획"
+    }
+  ],
+  "s1_company": {
+    "name": "Hibridge Legacy Lab",
+    "stage": "Seed stage, three client firms",
+    "channels": [
+      "All",
+      "Engineering",
+      "Clients",
+      "Operations",
+      "Leads (private)"
+    ],
+    "roles": [
+      {
+        "title": "CEO",
+        "count": 1
+      },
+      {
+        "title": "CTO",
+        "count": 1
+      },
+      {
+        "title": "COO",
+        "count": 1
+      },
+      {
+        "title": "Engineering lead",
+        "count": 1
+      },
+      {
+        "title": "Customer success lead",
+        "count": 1
+      },
+      {
+        "title": "Engineer",
+        "count": 4
+      },
+      {
+        "title": "Data engineer",
+        "count": 2
+      },
+      {
+        "title": "Customer success manager",
+        "count": 2
+      },
+      {
+        "title": "Sales",
+        "count": 1
+      },
+      {
+        "title": "Ops and finance",
+        "count": 1
+      }
+    ],
+    "models": "Leadership talks on its own tier among itself (CEO on Astra, executives on Muse, leads on MiMo Pro); any conversation that includes staff runs on MiMo Flash, at the listener's level"
+  },
+  "runs": [
+    {
+      "id": "s1-test-001",
+      "date": "2026-10-23",
+      "branch": "S1",
+      "edition": "01",
+      "test_only": true,
+      "channel": "Clients",
+      "channel_id": "cust",
+      "turns": 9,
+      "seconds": 60,
+      "routing_policy": "role-routes-2026-10",
+      "forcing_condition": null,
+      "observed": {
+        "turn_log": "The turn-by-turn log, including which model spoke each turn, stays inside the office for this test card and is not published.",
+        "turn_log_ko": "시험용 카드라 턴마다 어느 모델이 말했는지 담은 대화 기록은 사무실 안에만 두고 공개하지 않습니다."
+      },
+      "agent_inputs": "the pre-decision situation and the channel history",
+      "agent_inputs_ko": "결정 이전의 상황과 채널 기록",
+      "judge": "Undecided",
+      "judge_ko": "미결정",
+      "matched_reference": "Not comparable yet",
+      "matched_reference_ko": "아직 비교할 수 없음",
+      "note": "First end-to-end test. Agents deferred the decision, so the next runs add a forcing condition such as a deadline.",
+      "roster_snapshot": "S1-01-2026-10-23",
+      "judge_family_check": {
+        "status": "not_verified",
+        "note": "Judge-family separation is a requirement of the method; it is not verified for this run, whose public record names no judge model or family.",
+        "note_ko": "규칙상 판정 모델은 발화 모델과 다른 계열이어야 하지만, 이 운행의 공개 기록에는 판정 모델과 계열이 없어 확인되지 않았습니다."
+      }
+    }
+  ],
+  "roster_snapshots": [
+    {
+      "id": "S1-01-2026-10-23",
+      "edition": "01",
+      "org": "hibridge-legacy-lab",
+      "branch": "S1",
+      "date": "2026-10-23",
+      "source_revision": "5bf4b8a34359a0e6cc1e26e04b362e0d91784c9f",
+      "file": "public/data/s1-org.json",
+      "git_blob": "3b43648cfdb3156b04835b327986256601fea656",
+      "routes": [
+        {
+          "route": "default",
+          "model": "MiMo Flash",
+          "model_id": "mimo-v2.6-flash",
+          "family": "mimo"
+        },
+        {
+          "route": "team_lead",
+          "model": "MiMo Pro",
+          "model_id": "mimo-v2.6-pro",
+          "family": "mimo"
+        },
+        {
+          "route": "div_head",
+          "model": "Muse",
+          "model_id": "muse-spark-1.3",
+          "family": "muse"
+        },
+        {
+          "route": "corp_head",
+          "model": "Astra",
+          "model_id": "astra",
+          "family": "gpt"
+        }
+      ],
+      "note": "The roster and route table recorded run s1-test-001 (2026-10-23) used, as committed on the day of the run (the cust channel and every member route are the same as in 7a122eb, the first roster commit that day). Runs are checked against this snapshot, not against the current s1-org.json.",
+      "note_ko": "2026-10-23 운행(s1-test-001)이 쓴 구성원 명단과 경로 표로, 운행 당일 커밋된 그대로입니다(cust 채널과 구성원별 경로는 그날 첫 명단 커밋 7a122eb와 같습니다). 운행은 지금의 s1-org.json이 아니라 이 스냅숏으로 검사합니다."
+    }
+  ],
+  "research": {
+    "method": [
+      "Case cards: cards are designed to hold a pre-decision situation, two or more options, the people and channel involved, and evaluator-only invariants; the separate reference outcome field is withheld from the public shards. The published 19,414 stage-1 cards include known exceptions (3 single-option cards, 3 empty-option texts, and 23 null invariants) and do not carry a refutation condition yet, which is to be fixed before any judged run.",
+      "Stage moves: by protocol, when a case is moved into another synthetic industry, its preserved invariants and lost properties are to be recorded so each move can be audited; public artifacts currently cover stage-1 shards only, without published move-by-move loss tables.",
+      "Agents: the current routing policy assigns roles across model families (CEO on GPT-family Astra, executives on Muse, leads on MiMo Pro in leadership-only threads, and MiMo Flash for everyone when staff join). Recorded run s1-test-001 (2026-10-23) used the earlier per-role policy configuration; its turn-by-turn speaker logs are unpublished. By protocol, runners are to supply only the pre-decision situation and channel history.",
+      "Hidden outcome: the protocol requires runners to withhold the reference outcome and evaluator-only invariants from every agent, and requires a judge from a different model family than the speakers; blinding requires runtime input logs and screening out public text cues, and each run states whether that separation is verified.",
+      "Locked checks: the evaluation protocol specifies verbatim storage of model answers without script edits plus pre-committed uniqueness and template-repetition checks; no judged-run transcript bytes or pre-run check receipts are published yet."
+    ],
+    "method_ko": [
+      "사례 카드: 카드는 결정 이전의 상황, 두 개 이상의 선택지, 관련 인물과 채널, 평가자 전용 불변 속성을 담도록 설계하며, 별도의 기준 결과 필드는 공개 묶음에 싣지 않습니다. 공개된 1단계 카드 19,414장에는 알려진 예외(단일 선택지 3장, 빈 선택지 3장, invariants null 23장)가 있으며 반증 조건은 아직 없어, 첫 판정 운행 전에 고정할 예정입니다.",
+      "무대 옮기기: 규칙상 사례를 다른 가상 업종으로 옮길 때 보존된 불변 속성과 잃은 속성을 기록해 나중에 감사할 수 있게 합니다. 현재 공개 자료에는 1단계 카드 묶음만 있으며 전환별 상실 속성 표는 아직 공개되지 않았습니다.",
+      "에이전트: 현행 배정 규칙은 역할에 따라 모델 계열을 나눕니다(리더십 전용 대화는 CEO GPT 계열 Astra, 임원 Muse, 팀장 MiMo Pro, 직원 참여 대화는 모두 MiMo Flash). 2026-10-23 운행(s1-test-001)에는 이전 역할별 설정이 적용되었고 턴별 발화 기록은 비공개입니다. 규칙상 실행기는 결정 이전의 상황과 채널 기록만 에이전트에 전달해야 합니다.",
+      "가려진 결과: 운행 규칙은 실행기가 기준 결과와 평가자 전용 invariants를 에이전트 입력에서 빼고, 판정자는 발화 모델과 다른 계열이 맡도록 정합니다. 실제 가림을 입증하려면 실행 입력 기록과 공개 문장의 결말 단서 차단이 필요하며, 판정 계열 분리 여부는 운행마다 적습니다.",
+      "고정된 검사: 평가 규칙은 모델 답변의 무편집 원문 보관과 운행 전 고정된 고유성·틀 반복 검사를 규정합니다. 다만 판정 운행의 대화 원문 바이트와 사전 고정 영수증은 아직 공개된 것이 없습니다."
+    ],
+    "limits": [
+      "Stage-1 cards carry an evaluator-only invariants field that often summarizes how the case resolved, and some public situation texts also disclose how a case ended; runners must withhold invariants and screen or rewrite leaked cards before blind runs.",
+      "Blinding is not verified from public records for recorded run s1-test-001: its turn-by-turn model inputs and outputs are not published, and the recorded agent_inputs string is self-reported metadata."
+    ],
+    "limits_ko": [
+      "1단계 카드의 invariants 필드는 평가자 전용이며 처리 결과를 요약한 경우가 많고, 일부 공개 situation 문장에도 결말이 드러납니다. 블라인드 운행 전에는 실행기가 invariants를 빼고 결말이 드러난 카드를 가리거나 고쳐 써야 합니다.",
+      "기록된 운행 s1-test-001의 실제 가림 여부는 공개 기록으로 확인되지 않았습니다. 턴별 모델 입력·출력 기록이 비공개이며 agent_inputs 항목은 자기기록 메타데이터입니다."
+    ],
+    "generated_limits": [
+      "Virtual-office results: one end-to-end test run so far.",
+      "Agents deferred the decision in the first test run.",
+      "Judge-family separation is a requirement of the method but is not verified for the first test run: its public record names no judge model or family.",
+      "No run with a deadline or budget cap has been made yet; that is a separate condition.",
+      "27 of the 28 virtual offices and 4 of the 5 sizes have not been built yet; the goal is 100 episodes."
+    ],
+    "generated_limits_ko": [
+      "가상 사무실 결과는 지금까지 처음부터 끝까지 돌린 시험 한 번입니다.",
+      "첫 시험 운행에서 에이전트는 결정을 미뤘습니다.",
+      "규칙상 판정 모델은 발화 모델과 다른 계열이어야 하지만, 첫 시험 운행에서는 공개 기록에 판정 모델과 계열이 없어 확인되지 않았습니다.",
+      "기한이나 예산 상한을 넣은 운행은 아직 없습니다. 이는 별도 조건입니다.",
+      "가상 사무실 28곳 가운데 27곳, 규모 5가지 가운데 4가지는 아직 짓지 않았습니다. 목표는 에피소드 100개입니다."
+    ],
+    "generated_note": "generated_limits are written by scripts/build-simul-home.py from the run, edition and branch records; add caveats to limits and limits_ko instead.",
+    "downloads": [
+      {
+        "id": "s1-org",
+        "href": "/data/s1-org.json",
+        "label": "15-person synthetic company (JSON)",
+        "label_ko": "15인 가상 회사(JSON)"
+      },
+      {
+        "id": "cards-s1",
+        "href": "/data/cards/s1/index.json",
+        "label": "Stage-1 case cards: 19,414 in 20 synthetic companies (index of JSONL files)",
+        "label_ko": "1단계 사례 카드: 가상 회사 20곳에 19,414장(JSONL 파일 색인)"
+      },
+      {
+        "id": "status",
+        "href": "/data/simul-status.json",
+        "label": "Status, editions, runs and method (JSON)",
+        "label_ko": "현황·판본·운행·방법 기록(JSON)"
+      }
+    ],
+    "code": "Verification script, card schema and a 100-card sample: https://github.com/RISCON-Labs/simul-eval. Live evidence gate (v4 site): https://vericull.risconlabs.com (public repository for Vericull v5 is held pending completion of its separate v5 release audit). The simulation runner is being prepared separately for public release.",
+    "code_ko": "검증 스크립트, 카드 스키마, 카드 100장 표본: https://github.com/RISCON-Labs/simul-eval. 운영 중인 증거 관문(v4 사이트): https://vericull.risconlabs.com (Vericull v5 공개 저장소는 별도 v5 릴리스 감사 종료 후 공개 여부를 판단합니다). 시뮬레이션 실행기는 별도로 공개를 준비 중입니다.",
+    "generated_method_judge_clause": "For the first test run it is not verified, because its record names no judge model.",
+    "generated_method_judge_clause_ko": "첫 시험 운행은 기록에 판정 모델이 없어 확인되지 않았습니다."
+  },
+  "principles": [
+    {
+      "name": "Every company and person is synthetic",
+      "name_ko": "모든 회사와 사람은 합성입니다",
+      "desc": "Companies, members and cases on this site and in the office are synthetic, built for research.",
+      "desc_ko": "이 사이트와 사무실의 회사·구성원·사례는 연구로 만든 합성입니다."
+    },
+    {
+      "name": "Judgment stays human",
+      "name_ko": "판단은 사람에게 남습니다",
+      "desc": "The simulation lays out the grounds; it does not decide for anyone.",
+      "desc_ko": "시뮬레이션은 근거를 펼칠 뿐, 누구를 대신해서도 결정하지 않습니다."
+    },
+    {
+      "name": "State how it could be wrong",
+      "name_ko": "틀릴 수 있는 조건을 밝힙니다",
+      "desc": "Each case is to carry the condition that would show its reading is wrong, fixed before its first judged run. Stage-1 cards do not carry it yet.",
+      "desc_ko": "사례마다 그 해석이 틀렸음을 보여 줄 조건을 첫 판정 운행 전에 정해 둡니다. 1단계 카드에는 아직 없습니다."
+    },
+    {
+      "id": "rerun",
+      "name": "Re-run at another size",
+      "name_ko": "다른 규모에서 다시 돌립니다",
+      "desc": "The same case is planned to run at 15 and at 22,385 people, to separate what is a matter of scale. Only the 15-person size is built so far.",
+      "desc_ko": "같은 사례를 15명과 22,385명 규모에서 돌릴 계획입니다. 규모 때문에 생기는 일을 가려내기 위해서입니다. 지금 지어진 것은 15명 규모뿐입니다."
+    }
+  ],
+  "routing_policies": [
+    {
+      "id": "role-routes-2026-10",
+      "rule": "role",
+      "desc": "Each member speaks on the route of their own role, whoever else is in the conversation.",
+      "desc_ko": "구성원마다 대화 상대와 관계없이 자기 역할의 경로로 말합니다.",
+      "used_by": [
+        "s1-test-001"
+      ],
+      "superseded_by": "listener-level-2026-10"
+    },
+    {
+      "id": "listener-level-2026-10",
+      "rule": "listener",
+      "desc": "Leadership-only conversations use each member's own route; any conversation that includes staff runs on the default route for everyone.",
+      "desc_ko": "리더십끼리의 대화는 각자 자기 역할의 경로를 쓰고, 직원이 끼는 대화는 모두 기본 경로로 돌립니다.",
+      "introduced": "2026-10-23"
+    }
+  ],
+  "model_routes": [
+    {
+      "route": "default",
+      "model": "MiMo Flash",
+      "model_id": "mimo-v2.6-flash",
+      "family": "mimo"
+    },
+    {
+      "route": "team_lead",
+      "model": "MiMo Pro",
+      "model_id": "mimo-v2.6-pro",
+      "family": "mimo"
+    },
+    {
+      "route": "div_head",
+      "model": "Muse",
+      "model_id": "muse-spark-1.3",
+      "family": "muse"
+    },
+    {
+      "route": "corp_head",
+      "model": "Astra",
+      "model_id": "astra",
+      "family": "gpt"
+    }
+  ],
+  "model_families": {
+    "mimo": {
+      "name": "MiMo",
+      "maker": "Xiaomi"
+    },
+    "muse": {
+      "name": "Muse",
+      "maker": "Meta"
+    },
+    "gpt": {
+      "name": "GPT",
+      "maker": "OpenAI"
+    },
+    "claude": {
+      "name": "Claude",
+      "maker": "Anthropic"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "branch": "S1",
+  "headcount": 15,
+  "company": {
+    "name": "Hibridge Legacy Lab",
+    "industry": "AI legacy transformation (moving enterprises' old business systems onto AI)",
+    "stage": "Seed stage, three client firms"
+  },
+  "channels": [
+    {
+      "id": "all",
+      "name": "All",
+      "type": "public",
+      "members": "all"
+    },
+    {
+      "id": "eng",
+      "name": "Engineering",
+      "type": "public",
+      "members": [
+        "cto",
+        "eng-lead",
+        "eng1",
+        "eng2",
+        "eng3",
+        "eng4",
+        "data1",
+        "data2"
+      ]
+    },
+    {
+      "id": "cust",
+      "name": "Clients",
+      "type": "public",
+      "members": [
+        "coo",
+        "cs-lead",
+        "cs1",
+        "cs2",
+        "sales1",
+        "eng-lead"
+      ]
+    },
+    {
+      "id": "ops",
+      "name": "Operations",
+      "type": "public",
+      "members": [
+        "ceo",
+        "coo",
+        "ops1"
+      ]
+    },
+    {
+      "id": "lead",
+      "name": "Leads",
+      "type": "private",
+      "members": [
+        "ceo",
+        "cto",
+        "coo",
+        "eng-lead",
+        "cs-lead"
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "ceo",
+      "name": "Elena Novak",
+      "title": "CEO",
+      "reports_to": null,
+      "route": "corp_head"
+    },
+    {
+      "id": "cto",
+      "name": "Daniel Okafor",
+      "title": "CTO",
+      "reports_to": "ceo",
+      "route": "div_head"
+    },
+    {
+      "id": "coo",
+      "name": "Priya Raman",
+      "title": "COO",
+      "reports_to": "ceo",
+      "route": "div_head"
+    },
+    {
+      "id": "eng-lead",
+      "name": "Marco Bianchi",
+      "title": "Engineering Lead",
+      "reports_to": "cto",
+      "route": "team_lead"
+    },
+    {
+      "id": "cs-lead",
+      "name": "Sofia Lindqvist",
+      "title": "Customer Success Lead",
+      "reports_to": "coo",
+      "route": "team_lead"
+    },
+    {
+      "id": "eng1",
+      "name": "Kenji Watanabe",
+      "title": "Engineer",
+      "reports_to": "eng-lead",
+      "route": "default"
+    },
+    {
+      "id": "eng2",
+      "name": "Lucas Moreau",
+      "title": "Engineer",
+      "reports_to": "eng-lead",
+      "route": "default"
+    },
+    {
+      "id": "eng3",
+      "name": "Amira Haddad",
+      "title": "Engineer",
+      "reports_to": "eng-lead",
+      "route": "default"
+    },
+    {
+      "id": "eng4",
+      "name": "Tomas Herrera",
+      "title": "Engineer",
+      "reports_to": "eng-lead",
+      "route": "default"
+    },
+    {
+      "id": "data1",
+      "name": "Hannah Fischer",
+      "title": "Data Engineer",
+      "reports_to": "cto",
+      "route": "default"
+    },
+    {
+      "id": "data2",
+      "name": "Arjun Mehta",
+      "title": "Data Engineer",
+      "reports_to": "cto",
+      "route": "default"
+    },
+    {
+      "id": "cs1",
+      "name": "Grace Chen",
+      "title": "Customer Success Manager",
+      "reports_to": "cs-lead",
+      "route": "default"
+    },
+    {
+      "id": "cs2",
+      "name": "Noah Williams",
+      "title": "Customer Success Manager",
+      "reports_to": "cs-lead",
+      "route": "default"
+    },
+    {
+      "id": "sales1",
+      "name": "Isabela Costa",
+      "title": "Sales",
+      "reports_to": "coo",
+      "route": "default"
+    },
+    {
+      "id": "ops1",
+      "name": "Samuel Adeyemi",
+      "title": "Operations & Finance",
+      "reports_to": "coo",
+      "route": "default"
+    }
+  ],
+  "note": "Every company and person in this file is synthetic, built for research."
+}

@@ -1,0 +1,195 @@
+{
+ "name": "SIMUL stage-1 case cards",
+ "updated": "2026-11-20",
+ "roster_revision": "2026-11-20",
+ "source_revision": "6235997",
+ "source_revision_note": "Git commit that added every shard below. Each shard digest is the SHA-256 of the file bytes at that commit, and owner_at_source is the organization that held the slot in editions.json at that commit.",
+ "description": "Synthetic decision-point case cards, built for research. Each card is written as a decision point in one synthetic company with options, participants, channel, and evaluator-only invariants; some published stage-1 situation texts also disclose how the case ended, and evaluator-only invariants often summarize how the case resolved (strip invariants and curate leaked texts before blind runs). The separate reference_outcome field is held back for evaluation and is not included. Stage-1 cards do not carry a refutation condition yet; one is to be written and fixed for each card before its first judged run. Each file belongs to one organization, named by its immutable org id; the edition number is only the roster slot the organization held when the file was built.",
+ "fields": {
+  "card_id": "stable card identifier, unique across every file",
+  "edition": "roster slot (edition number) of the organization when the card was built; a display slot, not an identity",
+  "situation": "written as the situation before the decision; some published stage-1 texts also disclose how the case ended and require curation before blind runs",
+  "options": "the choices on the table",
+  "invariants": "evaluator-only organizational properties the case keeps; often summarizes how the case resolved and must be stripped from agent inputs",
+  "participants": "roster ids of the members involved",
+  "channel": "office channel id",
+  "opener": "roster id of the member who opens the conversation"
+ },
+ "not_included": {
+  "reference_outcome": "held back for evaluation",
+  "refutation_condition": "not written for stage-1 cards yet; fixed for each card before its first judged run"
+ },
+ "total": 19414,
+ "editions": [
+  {
+   "edition": "01",
+   "org": "hibridge-legacy-lab",
+   "file": "/data/cards/s1/01.jsonl",
+   "cards": 960,
+   "sha256": "42d82c4a79de996a0490dd01e55df91cee3ebee35e122be27fb8464c5f70a2e3",
+   "owner_at_source": "Hibridge Legacy Lab"
+  },
+  {
+   "edition": "03",
+   "org": "brightline-performance",
+   "file": "/data/cards/s1/03.jsonl",
+   "cards": 981,
+   "sha256": "8761839adb15d710c948c86113a59ec48ed56a16f2d499220d44a4ce4c296921",
+   "owner_at_source": "Brightline Performance"
+  },
+  {
+   "edition": "04",
+   "org": "sevenply-works",
+   "file": "/data/cards/s1/04.jsonl",
+   "cards": 962,
+   "sha256": "61738309e794ee2871c2002a808e54d1ad0c9cc689f7009c2f241f7d47745f7a",
+   "owner_at_source": "Sevenply Works"
+  },
+  {
+   "edition": "05",
+   "org": "aether-optics",
+   "file": "/data/cards/s1/05.jsonl",
+   "cards": 968,
+   "sha256": "c164c1b8e51c9835a1f3a61f52b84c3bf77594539b1debd7db86bdf0657070e2",
+   "owner_at_source": "Aether Optics"
+  },
+  {
+   "edition": "06",
+   "org": "quickwrap-studio",
+   "file": "/data/cards/s1/06.jsonl",
+   "cards": 967,
+   "sha256": "d08d27181874406465d23547fe92fce43c0841200b4efc60fc800b9433066bf0",
+   "owner_at_source": "Quickwrap Studio"
+  },
+  {
+   "edition": "07",
+   "org": "northgate-energy",
+   "file": "/data/cards/s1/07.jsonl",
+   "cards": 957,
+   "sha256": "03db0537a08f4a6f97ac71959d8b78a437c40a07f3fbbf0a3a43ce4211ef77e5",
+   "owner_at_source": "Northgate Energy"
+  },
+  {
+   "edition": "08",
+   "org": "vanguard-autonomy",
+   "file": "/data/cards/s1/08.jsonl",
+   "cards": 971,
+   "sha256": "bedf08e8802da103a522e489df6eec720f18a71e156baa738ae283aba3ba57d8",
+   "owner_at_source": "Vanguard Autonomy"
+  },
+  {
+   "edition": "09",
+   "org": "halcyon-analytics",
+   "file": "/data/cards/s1/09.jsonl",
+   "cards": 973,
+   "sha256": "8f8ed089cd15034388e4433f6c6e5c73dcec0a1a247bc5bbb79c77fdd10f2614",
+   "owner_at_source": "Halcyon Analytics"
+  },
+  {
+   "edition": "10",
+   "org": "harvest-and-spring-foods",
+   "file": "/data/cards/s1/10.jsonl",
+   "cards": 971,
+   "sha256": "30346adef04e39fd6990bc15cab3a0b40b05f56df8c3c8e50a58aeb0a9b64071",
+   "owner_at_source": "Harvest and Spring Foods"
+  },
+  {
+   "edition": "11",
+   "org": "parcelstream",
+   "file": "/data/cards/s1/11.jsonl",
+   "cards": 961,
+   "sha256": "e245958a08251d250161fb9957778c46f1843fead75ac3374e888a5e8eeb4a9c",
+   "owner_at_source": "Parcelstream"
+  },
+  {
+   "edition": "12",
+   "org": "kestrel-university-of-ai",
+   "file": "/data/cards/s1/12.jsonl",
+   "cards": 971,
+   "sha256": "f594dea6282f9e8bce8306cd0df7063b777111b95a7a1a8fbf81a51818ae70ee",
+   "owner_at_source": "Kestrel University of AI"
+  },
+  {
+   "edition": "13",
+   "org": "marlowe-graduate-school-of-ai",
+   "file": "/data/cards/s1/13.jsonl",
+   "cards": 959,
+   "sha256": "66dc2194f128592099418918d6abecc1ce4b757caebf26b7a46c7394a04b780e",
+   "owner_at_source": "Marlowe Graduate School of AI"
+  },
+  {
+   "edition": "14",
+   "org": "wayfinder-ai-academy",
+   "file": "/data/cards/s1/14.jsonl",
+   "cards": 978,
+   "sha256": "441863ce96a64399f6d28a5aabb61874775a4e574fd76fa9bb6c9f87af3bae5a",
+   "owner_at_source": "Wayfinder AI Academy"
+  },
+  {
+   "edition": "15",
+   "org": "orrin-institute-for-machine-intelligence",
+   "file": "/data/cards/s1/15.jsonl",
+   "cards": 977,
+   "sha256": "9cabf4f4e52ffa8423961cc69fce2751d378806832a768dd4dd45fcd44cebc0e",
+   "owner_at_source": "Orrin Institute for Machine Intelligence"
+  },
+  {
+   "edition": "16",
+   "org": "alderia-ministry-of-public-administration",
+   "file": "/data/cards/s1/16.jsonl",
+   "cards": 970,
+   "sha256": "e3d4049f597a3f1218fc4903d9e3bc6c9079e7489e6f61fa839ea42b3fea2e15",
+   "owner_at_source": "Alderia Ministry of Public Administration"
+  },
+  {
+   "edition": "17",
+   "org": "eastbrook-community-service-center",
+   "file": "/data/cards/s1/17.jsonl",
+   "cards": 982,
+   "sha256": "7ccf94c668a08219a347c798d75d95b8d90768fb086c0a46968e8111a287bf68",
+   "owner_at_source": "Eastbrook Community Service Center"
+  },
+  {
+   "edition": "18",
+   "org": "calder-ridge-general-hospital",
+   "file": "/data/cards/s1/18.jsonl",
+   "cards": 975,
+   "sha256": "d0bc48930a2d217eeece15ed05b7e70a8a34d3492ab393bf18d1b27d92d1d428",
+   "owner_at_source": "Calder Ridge General Hospital"
+  },
+  {
+   "edition": "19",
+   "org": "northmere-university-hospital",
+   "file": "/data/cards/s1/19.jsonl",
+   "cards": 977,
+   "sha256": "74a5f8d1c7199c2aa67f0b388e4b36c66bc063bb806edb7dbc692ce953c24ff2",
+   "owner_at_source": "Northmere University Hospital"
+  },
+  {
+   "edition": "20",
+   "org": "halvorsen-pryce-llp",
+   "file": "/data/cards/s1/20.jsonl",
+   "cards": 984,
+   "sha256": "5fd98f7cc304b0a933a1814dae41fe6a7fe53d56a722a307718718c712c52818",
+   "owner_at_source": "Halvorsen Pryce LLP"
+  },
+  {
+   "edition": "21",
+   "org": "linden-street-law-office",
+   "file": "/data/cards/s1/21.jsonl",
+   "cards": 970,
+   "sha256": "459a0470c28cdc2ded82c501aa136a1aaab6113b348f7f950cb12433b3e20aa4",
+   "owner_at_source": "Linden Street Law Office"
+  }
+ ],
+ "former_orgs": [
+  {
+   "org": "vanguard-autonomy",
+   "name": "Vanguard Autonomy",
+   "slot": "08",
+   "frozen": "2026-11-20",
+   "succeeded_by": "dioptra-defense",
+   "note": "Slot 08 now belongs to DIOPTRA Defense. The 971 stage-1 cards in 08.jsonl were built for Vanguard Autonomy and stay attributed to it."
+  }
+ ]
+}

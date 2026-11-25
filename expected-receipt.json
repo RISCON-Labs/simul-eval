@@ -1,0 +1,312 @@
+{
+  "archive_integrity_status": "pass",
+  "artifacts": [
+    {
+      "bytes": 7406,
+      "path": "data/cards-s1-index.json",
+      "sha256": "e6bcef7e1847f74fb1ad786ad887c3856df1b7241b653b0f9377246d18b6b589"
+    },
+    {
+      "bytes": 3497,
+      "path": "data/s1-org.json",
+      "sha256": "49190ca4c8a52b2c3f889dbdb7558016ca04c6d85d38d63e5f36e1a422c58304"
+    },
+    {
+      "bytes": 134575,
+      "path": "data/sample-cards-s1.jsonl",
+      "sha256": "d7faf7e021737246b60495830271630673a4ce99cfb2ff22dd5b78354a3aa519"
+    },
+    {
+      "bytes": 3153,
+      "path": "data/sample-manifest.json",
+      "sha256": "0a1d6d3494cdeb1940010256dfa451aefd456a40fccd6aca9e751883aa71ae40"
+    },
+    {
+      "bytes": 29299,
+      "path": "data/simul-status.json",
+      "sha256": "c57226a8cc6ae49d2adb4f79534acc6d1e35a80110f9c4afc22340f68414d646"
+    },
+    {
+      "bytes": 4059,
+      "path": "schema/stage1-card.schema.json",
+      "sha256": "eb466a6cc1610fc65a3388ec2ef1a4f00f0f9b848fac279a452ac71ad5168e71"
+    }
+  ],
+  "blind_readiness": {
+    "agent_projection": {
+      "all_cards": {
+        "cards": 100,
+        "sha256": "6afb67e722e77cd9bd9cccddb96e5c1a29192fec2965f85de9b2f027055985a9"
+      },
+      "excluding_flagged_cards": {
+        "cards": 97,
+        "sha256": "a1eb324ec7fe465191bbc5737f6df4bd7563ca3ce8104c543cb3f348539a0d75"
+      },
+      "fields": [
+        "channel",
+        "opener",
+        "participants",
+        "situation",
+        "options"
+      ]
+    },
+    "agent_visible_option_cue_count": 0,
+    "agent_visible_situation_cue_count": 3,
+    "evaluator_field_stripped_in_projection": true,
+    "evaluator_resolution_cue_count": 86,
+    "flagged_agent_visible_matches": [
+      {
+        "card_id": "003b45290432",
+        "options": [],
+        "situation": [
+          {
+            "class": "prior_ruling_stated",
+            "text": "has already said"
+          }
+        ],
+        "where": "sample line 77"
+      },
+      {
+        "card_id": "009cbe6ab507",
+        "options": [],
+        "situation": [
+          {
+            "class": "prior_ruling_stated",
+            "text": "has already said"
+          }
+        ],
+        "where": "sample line 54"
+      },
+      {
+        "card_id": "00a79e459682",
+        "options": [],
+        "situation": [
+          {
+            "class": "prior_ruling_stated",
+            "text": "has already agreed"
+          }
+        ],
+        "where": "sample line 80"
+      }
+    ],
+    "flagged_option_card_ids": [],
+    "flagged_situation_card_ids": [
+      "003b45290432",
+      "009cbe6ab507",
+      "00a79e459682"
+    ],
+    "method": "Lexical screen of the evaluator field and of the agent-visible situation and options. A hit is a candidate for curation, not a proven leak; a card without a hit is not cleared. Semantic review of every card used in a judged run is still required.",
+    "required_before_judged_run": [
+      "Build every agent input with project_for_agent: the five agent fields only, invariants stripped.",
+      "Rewrite to the moment before the decision, or exclude, every card listed in flagged_situation_card_ids and flagged_option_card_ids, then review the remaining cards.",
+      "Keep the published bytes unchanged and record the digest of the curated agent projection that was used."
+    ],
+    "sample_cards_audited": 100,
+    "status": "requires_curation_before_judged_run"
+  },
+  "checks": [
+    {
+      "errors": [],
+      "id": "archive.files_readable",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Every pack file is a regular file inside the pack, read once, and parses as strict JSON"
+    },
+    {
+      "errors": [],
+      "id": "archive.schema_contract",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Schema file and card index state the fixed field contract of the protocol, exactly"
+    },
+    {
+      "errors": [],
+      "id": "archive.index_consistent",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Card index: unique shards, well-formed digests, total equals the sum of shard counts"
+    },
+    {
+      "errors": [],
+      "id": "archive.sample_jsonl",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Sample: every line is one JSON object, no blank or malformed line"
+    },
+    {
+      "errors": [],
+      "id": "archive.sample_schema",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Sample: every card has exactly the protocol's fields, with the right types"
+    },
+    {
+      "errors": [],
+      "id": "archive.sample_card_id_unique",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Sample: card_id is unique"
+    },
+    {
+      "errors": [],
+      "id": "archive.sample_withheld_absent",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Sample: no withheld field at any depth, and no withheld-field name in agent-visible text"
+    },
+    {
+      "errors": [],
+      "id": "archive.sample_policy",
+      "layer": "archive",
+      "result": "pass",
+      "title": "Sample: the fixed 20 x 5 = 100 policy, exactly the cards the manifest lists, bound to this card index"
+    },
+    {
+      "errors": [],
+      "id": "blind_readiness.projection_contract",
+      "layer": "blind_readiness",
+      "result": "pass",
+      "title": "Every card projects to exactly the five agent fields; the evaluator field is stripped"
+    },
+    {
+      "errors": [],
+      "id": "record_consistency.status_counts",
+      "layer": "record_consistency",
+      "result": "pass",
+      "title": "Status: edition, branch and routing-policy records are unique and refer to each other"
+    },
+    {
+      "errors": [],
+      "id": "record_consistency.roster",
+      "layer": "record_consistency",
+      "result": "pass",
+      "title": "Roster: headcount, reporting lines, channels and model routes resolve"
+    },
+    {
+      "errors": [],
+      "id": "record_consistency.model_families",
+      "layer": "record_consistency",
+      "result": "pass",
+      "title": "Status: each model id has one family across model_routes, roster_snapshots and judge_models"
+    },
+    {
+      "errors": [],
+      "id": "record_consistency.run_references",
+      "layer": "record_consistency",
+      "result": "pass",
+      "title": "Status: each run's date, edition, branch, roster snapshot, channel and members resolve"
+    },
+    {
+      "errors": [],
+      "id": "record_consistency.judge_family",
+      "layer": "record_consistency",
+      "result": "pass",
+      "title": "Status: each run's judge-family status says what its record supports"
+    }
+  ],
+  "empirical_blinding": {
+    "basis": "The pack holds no per-turn model input. Whether an agent in a run received only the five agent fields, and whether the situation it received told how the case ended, cannot be established from the public record.",
+    "not_verified_runs": 1,
+    "status": "not_verified_from_public_record",
+    "verified_runs": 0
+  },
+  "empirical_judge_separation": {
+    "basis": "The pack holds no turn log and no judge transcript. A judge family named in the status file is a self-declared record; agreement inside that record is reported under record_consistency and is not evidence of which model judged a run.",
+    "not_verified_runs": 1,
+    "record_declares_distinct_judge_family_runs": 0,
+    "runs": [
+      {
+        "judge_model_id": null,
+        "record_state": "no_judge_model_in_record",
+        "recorded_status": "not_verified",
+        "run": "s1-test-001",
+        "speaker_families": [
+          "mimo",
+          "muse"
+        ]
+      }
+    ],
+    "status": "not_verified_from_public_record",
+    "verified_runs": 0
+  },
+  "errors": [],
+  "field_contract": {
+    "agent": [
+      "channel",
+      "opener",
+      "participants",
+      "situation",
+      "options"
+    ],
+    "evaluator": [
+      "invariants"
+    ],
+    "identity": [
+      "card_id",
+      "edition"
+    ],
+    "withheld": [
+      "reference_outcome",
+      "refutation_condition"
+    ]
+  },
+  "not_checked": [
+    "Whether a sentence an agent sees gives the outcome away in words the lexicon does not list.",
+    "The reference outcomes and refutation conditions: they are withheld and are not in this pack.",
+    "Model behaviour: this pack holds no model transcript, so no run is re-scored here.",
+    "Whether the one recorded test run was blind, and which model judged it.",
+    "The full shards: pass --shards DIR to check them against the card index."
+  ],
+  "observations": {
+    "sample": {
+      "card_ids": {
+        "empty_option_text": [],
+        "null_invariants": [],
+        "opener_not_in_participants": [],
+        "repeated_participant": [],
+        "single_option": []
+      },
+      "cards": 100,
+      "counts": {
+        "empty_option_text": 0,
+        "null_invariants": 0,
+        "opener_not_in_participants": 0,
+        "repeated_participant": 0,
+        "single_option": 0
+      }
+    }
+  },
+  "overall_status": "pass",
+  "overall_status_scope": "archive_integrity and record_consistency checks, plus blind_readiness.require_clean when it was requested. It is not a statement that the cards are ready for a blind run.",
+  "protocol_version": "simul-stage1-v1",
+  "record_consistency": "pass",
+  "sample_policy": {
+    "per_shard": 5,
+    "rule_id": "first_5_by_card_id_asc_per_shard",
+    "shards": 20,
+    "total": 100
+  },
+  "schema_version": "simul-eval-receipt-v2",
+  "summary": {
+    "card_index": {
+      "cards_total": 19414,
+      "organizations": 20,
+      "shards": 20
+    },
+    "roster": {
+      "channels": 5,
+      "people": 15
+    },
+    "status": {
+      "branches": 5,
+      "branches_active": 1,
+      "editions": 28,
+      "editions_active": 1,
+      "editions_planned": 27,
+      "runs": 1,
+      "test_only_runs": 1
+    }
+  },
+  "tool": "verify_simul_pack",
+  "version": "2.0.0"
+}
